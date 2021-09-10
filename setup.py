@@ -5,16 +5,16 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
-    name = "python-dfrobot-sen0322-oxygen-sensor",
+    name = "DFRobot_SEN0322_Oxygen_Sensor",
     version = "1.0.0",
     author = "ZhixinLiu",
     author_email = "zhixin.liu@dfrobot.com",
-    description = ("DFRobot Oxygen Sensor library"),
+    description = ("DFRobot SEN0322 Oxygen Sensor library"),
     license = "MIT",
     keywords = "DFRobot Oxygen Sensor",
     url = "https://github.com/Keraxel/DFRobot_OxygenSensor-PyPI",
-    packages=['python-dfrobot-sen0322-oxygen-sensor'],
-    long_description=read('python-dfrobot-sen0322-oxygen-sensor/README.md'),
+    packages=['DFRobot_SEN0322_Oxygen_Sensor'],
+    long_description=read('DFRobot_SEN0322_Oxygen_Sensor/README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",
