@@ -1,89 +1,68 @@
-# DFRobot_OxygenSensor
-DFRobot's OxygenSensor
+# DFRobot Oxygen concentration sensor
 
-## DFRobot_OxygenSensor Library for Arduino
----------------------------------------------------------
-Arduino library is provided for reading oxygen concentrations through I2C and gas sensors.
-Used to read the ozone and oxygen concentrations of the current module
+This RaspberryPi Oxygen sensor board can communicate with RaspberryPi via IIC.<br>
+Oxygen sensor can measure data from 0-30%vol.<br>
+Oxygen sensor High precision and wide linear range.<br>
+Oxygen sensor Strong anti-interference ability.<br>
+Oxygen sensor Excellent repeatability and stability.<br>
 
+## DFRobot Oxygen Library for RaspberryPi
+
+Provide the Raspberry Pi library for the DFRobot_Oxygen module.
 
 ## Table of Contents
 
+* [Summary](#summary)
+* [Feature](#feature)
 * [Installation](#installation)
 * [Methods](#methods)
-* [Compatibility](#compatibility)
 * [History](#history)
 * [Credits](#credits)
 
-<snippet>
-<content>
+## Summary
+
+Oxygen module.
+
+## Feature
+
+1. The module has two modes for calibration, one is button calibration, the other is code calibration. <br>
+2. Long press the button for calibration. Press the button to determine whether it has been calibrated. <br>
+3. Code calibration 10 minutes after the sensor is electrified, the running code will be calibrated successfully. <br>
+4. You can measure the concentration of oxygen in the air. <br>
 
 ## Installation
 
-To use this library download the zip file, uncompress it to a folder named DFRobot_OxygenSensor.
-Download the zip file first to use this library and uncompress it to a folder named DFRobot_OxygenSensor.
+This Sensor should work with DFRobot_Oxygen on RaspberryPi. <br>
+Run the program:
+
+```
+$> python get_oxygen_data.py
+$> python calibratel_oxygen_sensor.py
+```
 
 ## Methods
 
-```C++
-class DFRobot_OxygenSensor{  
-public:
+```py
 
- /*
-  * @brief initialization parameters for i2c.
-  *
-  * @param addr is I2c device number.
-  *     iic slave Address, The default is ADDRESS 3.
-  *     ADDRESS_0               0x70           // iic slave Address
-  *     ADDRESS_1               0x71
-  *     ADDRESS_2               0x72
-  *     ADDRESS_3               0x73
-  *
-  * @return true and false.
-  */
-   bool begin(uint8_t addr);
+  def get_ozone_data(self ,collectnum):
+    '''
+      @brief get the oxygen data,units of vol
+      @param collectnum: Collect the number
+      @return  Oxygen concentration, (units %)
+    '''
 
- /*
-  * @brief Calibrate Oxygen sensor
-  *
-  * @param vol is oxygen concentration
-  *
-  * @param mv  is mv
-  *  1. Directly calibrate the oxygen sensor by adding two parameters to the sensor
-  *  2. Waiting for stable oxygen sensors for about 10 minutes, 
-  *     OXYGEN_CONECTRATION is the current concentration of oxygen in the air (20.9%mol except in special cases) 
-  *     Not using the first calibration method, the OXYGEN MV must be 0.
-  */
-   void Calibrate(float vol, float mv)
-
-
- /*
-  * @brief read Oxygen data.
-  *
-  * @return Percent oxygen concentration.
-  */
-   float ReadOxygenData();
-};
+  def calibrate(self ,vol ,mv):
+    '''
+      @brief calibrate key value
+      @param vol oxygen content
+      @param mv  the value marked on the sensor
+  '''
 
 ```
-## Compatibility
-
-MCU                | Work Well | Work Wrong | Untested  | Remarks
------------------- | :----------: | :----------: | :---------: | -----
-FireBeetle-ESP32  |      √       |             |            | 
-FireBeetle-ESP8266|      √       |              |             | 
-Mega2560  |      √       |             |            | 
-Arduino uno |       √      |             |            | 
-Leonardo  |      √       |              |             | 
-
-
-
-
 ## History
 
-- October 10, 2019 - Version 0.2 released.
-
+May 27, 2020 - Version 1.0 released.
 
 ## Credits
 
-Written by ZhixinLiu(zhixin.liu@dfrobot.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
+Written by ZhixinLiu(zhixin.liu@dfrobot.com), 2020. (Welcome to our website)
