@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name = "DFRobot_SEN0322_Oxygen_Sensor",
-    version = "1.0.1",
+    version = "1.0.2",
     author = "ZhixinLiu",
     author_email = "zhixin.liu@dfrobot.com",
     description = ("DFRobot SEN0322 Oxygen Sensor library"),
