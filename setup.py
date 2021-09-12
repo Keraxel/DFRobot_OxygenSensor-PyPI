@@ -12,12 +12,12 @@ setup(
     description = ("DFRobot SEN0322 Oxygen Sensor library"),
     license = "MIT",
     keywords = "DFRobot Oxygen Sensor",
-    url = "https://github.com/Keraxel/DFRobot_OxygenSensor-PyPI",
+    url = "https://github.com/DFRobot/DFRobot_OxygenSensor-PyPI",
     packages=['DFRobot_SEN0322_Oxygen_Sensor'],
     install_requires=[
         "smbus"
     ],
-    long_description=read('DFRobot_SEN0322_Oxygen_Sensor/README.md'),
+    long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Console",

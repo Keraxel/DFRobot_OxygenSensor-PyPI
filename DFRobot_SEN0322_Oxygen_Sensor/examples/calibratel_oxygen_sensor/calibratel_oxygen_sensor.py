@@ -16,7 +16,7 @@
 import sys
 import time
 sys.path.append("../..")
-from DFRobot_Oxygen import *
+from ...DFRobot_Oxygen import *
 
 OXYGEN_CONECTRATION = 20.9        # The current concentration of oxygen in the air.
 OXYGEN_MV           = 0           # The value marked on the sensor, Do not use must be assigned to 0.

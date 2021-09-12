@@ -17,7 +17,7 @@ import sys
 import time
 import math
 sys.path.append("../..")
-from DFRobot_Oxygen import *
+from ...DFRobot_Oxygen import *
 
 COLLECT_NUMBER   = 10              # collect number, the collection range is 1-100
 IIC_MODE         = 0x01            # default use IIC1
@@ -32,7 +32,7 @@ IIC_MODE         = 0x01            # default use IIC1
 '''
 oxygen = DFRobot_Oxygen_IIC(IIC_MODE ,ADDRESS_3)
 while(1):
-  ''' Smooth data collection £¬the collection range is 1-100 '''
+  ''' Smooth data collection ï¿½ï¿½the collection range is 1-100 '''
   oxygen_data = oxygen.get_oxygen_data(COLLECT_NUMBER);
   print("Oxygen concentration is %4.2f %%vol"%oxygen_data)
   time.sleep(1)
